@@ -7,7 +7,6 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <h1 className="heading">Studio Ghibli</h1>
         <Route exact path="/">
           <Home />
         </Route>
