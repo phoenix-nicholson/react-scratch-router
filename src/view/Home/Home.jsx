@@ -1,6 +1,6 @@
-import { fetchGhibli } from '../services/api';
+import { fetchGhibli } from '../../services/api';
 import { useEffect, useState } from 'react';
-import FilmList from '../components/FilmList/FilmList';
+import FilmList from '../../components/FilmList/FilmList/FilmList';
 
 export default function Home() {
   const [films, setFilms] = useState([]);

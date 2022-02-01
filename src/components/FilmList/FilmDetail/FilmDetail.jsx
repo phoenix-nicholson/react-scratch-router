@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function FilmDetail({ films }) {
+export default function FilmDetail(films) {
   return (
     <div>
       {films.map(({ id, title, description, running_time, image }) => (
