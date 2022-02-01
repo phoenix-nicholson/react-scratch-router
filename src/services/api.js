@@ -5,6 +5,7 @@ export async function fetchGhibli() {
   console.log('data', data);
   return data;
 }
+
 export async function fetchFilmId(id) {
   const response = await fetch(`https://ghibliapi.herokuapp.com/films/${id}`);
   const data = await response.json();

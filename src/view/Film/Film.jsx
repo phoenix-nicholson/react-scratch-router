@@ -4,14 +4,15 @@ import FilmDetail from '../../components/FilmList/FilmDetail/FilmDetail';
 import { fetchFilmId } from '../../services/api';
 
 export default function Film() {
-  const [film, setFilm] = useState([]);
+  const [films, setFilms] = useState({});
   const [loading, setLoading] = useState(true);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchData = async () => {
       const data = await fetchFilmId(id);
-      setFilm(data);
+      setFilms(data);
+      console.log('data', data);
       setLoading(false);
     };
     fetchData();
@@ -21,7 +22,7 @@ export default function Film() {
 
   return (
     <div>
-      <FilmDetail film={film} />
+      <FilmDetail films={films} />
     </div>
   );
 }
