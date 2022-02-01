@@ -4,16 +4,12 @@ import './filmList.css';
 export default function FilmList({ films }) {
   return (
     <div className="container">
-      <ul>
-        {films.map((item) => (
-          <div className="imgCard" key={item.id}>
-            <li>
-              {item.title}
-              <img src={item.image}></img>
-            </li>
-          </div>
-        ))}
-      </ul>
+      {films.map((item) => (
+        <div className="imgCard" key={item.id}>
+          <li>{item.title}</li>
+          <img src={item.image}></img>
+        </div>
+      ))}
     </div>
   );
 }

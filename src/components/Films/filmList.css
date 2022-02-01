@@ -4,7 +4,6 @@ img {
 .container {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
 }
 .imgCard {
   display: flex;
