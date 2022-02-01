@@ -1,9 +1,19 @@
 import { fetchGhibli } from '../services/api';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import FilmList from '../components/Films/filmList';
 
 export default function Home() {
+  const [films, setFilms] = useState([]);
   useEffect(() => {
-    fetchGhibli();
-  });
-  return <h1>hello world</h1>;
+    const fetchData = async () => {
+      const data = await fetchGhibli();
+      setFilms(data);
+    };
+    fetchData();
+  }, []);
+  return (
+    <div>
+      <FilmList films={films} />
+    </div>
+  );
 }
