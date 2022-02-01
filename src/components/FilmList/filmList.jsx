@@ -1,13 +1,17 @@
 import React from 'react';
-import './filmList.css';
+import './FilmList.css';
+import { Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 export default function FilmList({ films }) {
   return (
     <div className="container">
-      {films.map((item) => (
-        <div className="imgCard" key={item.id}>
-          <li>{item.title}</li>
-          <img src={item.image}></img>
+      {films.map(({ id, title, image }) => (
+        <div className="imgCard" key={id}>
+          <li>{title}</li>
+          <Link to={`${id}`}>
+            <img src={image}></img>
+          </Link>
         </div>
       ))}
     </div>
