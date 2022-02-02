@@ -14,7 +14,7 @@ export default function FilmDetail({ films }) {
       <div>
         <h1>{films.title}</h1>
         <button className="btn" onClick={handleClick}>
-          back
+          back to list
         </button>
         <h4>{films.description}</h4>
         <h5>Run time: {films.running_time} minutes</h5>
