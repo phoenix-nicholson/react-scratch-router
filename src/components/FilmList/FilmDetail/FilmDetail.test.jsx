@@ -40,7 +40,7 @@ const castleInSky = {
 // beforeAll(() => server.listen());
 // afterAll(() => server.listen());
 
-test.only('should be able to render details page', async () => {
+test('should be able to render details page', async () => {
   render(
     <MemoryRouter>
       <FilmDetail films={castleInSky} />
