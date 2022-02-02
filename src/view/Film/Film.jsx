@@ -12,7 +12,6 @@ export default function Film() {
     const fetchData = async () => {
       const data = await fetchFilmId(id);
       setFilms(data);
-      console.log('data', data);
       setLoading(false);
     };
     fetchData();
