@@ -54,5 +54,8 @@ test.only('should be able to render details page', async () => {
   const description = screen.getByRole('heading', {
     name: /the orphan sheeta inherited a mysterious crystal that links her to the mythical sky-kingdom of laputa. with the help of resourceful pazu and a rollicking band of sky pirates, she makes her way to the ruins of the once-great civilization. sheeta and pazu must outwit the evil muska, who plans to use laputa's science to make himself ruler of the world/i,
   });
+  const runTime = screen.getByRole('heading', { name: /run time: 124 minutes/i });
+
   expect(description).toBeInTheDocument();
+  expect(runTime).toBeInTheDocument();
 });
