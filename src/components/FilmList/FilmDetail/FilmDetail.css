@@ -1,0 +1,18 @@
+.img {
+  width: 300px;
+  height: auto;
+}
+
+.btn {
+  font-size: 1.2rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: white;
+  text-decoration: underline;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.btn:hover {
+  font-size: 1.3rem;
+  border: 2px solid white;
+}
