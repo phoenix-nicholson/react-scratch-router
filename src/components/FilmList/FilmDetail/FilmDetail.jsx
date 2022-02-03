@@ -16,7 +16,7 @@ export default function FilmDetail({ films }) {
         <button className="btn" onClick={handleClick}>
           back to list
         </button>
-        <h4>{films.description}</h4>
+        <h4> {films.description} </h4>
         <h5>Run time: {films.running_time} minutes</h5>
         <img className="img" src={films.image}></img>
       </div>

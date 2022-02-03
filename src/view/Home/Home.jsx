@@ -17,7 +17,8 @@ export default function Home() {
   if (loading) return <h1>Loading...</h1>;
   return (
     <div>
-      <h1>Studio Ghibli Films</h1>
+      <h1 className="title">Studio Ghibli Films</h1>
+
       <FilmList films={films} />
     </div>
   );
