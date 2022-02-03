@@ -5,8 +5,7 @@ import './FilmDetail.css';
 export default function FilmDetail({ films }) {
   const history = useHistory();
 
-  const handleClick = (e) => {
-    e.preventDefault();
+  const handleClick = () => {
     history.push('/');
   };
   return (

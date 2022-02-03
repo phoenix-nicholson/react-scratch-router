@@ -42,7 +42,7 @@ const castleInSky = {
 
 test('should be able to render details page', async () => {
   render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={['/12cfb892-aac0-4c5b-94af-521852e46d6a']}>
       <FilmDetail films={castleInSky} />
     </MemoryRouter>
   );
