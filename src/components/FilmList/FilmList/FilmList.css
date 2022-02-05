@@ -1,0 +1,30 @@
+img {
+  width: 200px;
+  height: auto;
+}
+.listImg:hover {
+  width: 210px;
+  height: auto;
+  border: 2px solid white;
+}
+a:visited {
+  color: white;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+.imgCard {
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+.title {
+  text-decoration: underline;
+}
+
+.film-title {
+  text-decoration: underline;
+}
