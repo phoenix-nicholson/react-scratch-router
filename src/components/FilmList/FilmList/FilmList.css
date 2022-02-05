@@ -7,6 +7,9 @@ img {
   height: auto;
   border: 2px solid white;
 }
+a:visited {
+  color: white;
+}
 .container {
   display: flex;
   flex-wrap: wrap;

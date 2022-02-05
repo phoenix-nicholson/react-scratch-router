@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
-import FilmDetail from './FilmDetail';
+import { MemoryRouter, Route } from 'react-router-dom';
+import Film from '../../../view/Film/Film';
 
 const castleInSky = {
   id: '2baf70d1-42bb-4437-b551-e5fed5a87abe',
@@ -42,13 +42,15 @@ const castleInSky = {
 
 test('should be able to render details page', async () => {
   render(
-    <MemoryRouter initialEntries={['/12cfb892-aac0-4c5b-94af-521852e46d6a']}>
-      <FilmDetail films={castleInSky} />
+    <MemoryRouter initialEntries={['/2baf70d1-42bb-4437-b551-e5fed5a87abe']}>
+      <Route path="/:id">
+        <Film />
+      </Route>
     </MemoryRouter>
   );
   screen.debug();
 
-  const heading = screen.getByRole('heading', { name: /castle in the sky/i });
+  const heading = await screen.findByRole('heading', { name: /castle in the sky/i });
   expect(heading).toBeInTheDocument();
 
   const description = await screen.findByRole('heading', {
